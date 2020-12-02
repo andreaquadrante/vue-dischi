@@ -8,13 +8,12 @@ const app = new Vue ({
 
   },
 
-  mounted: function(){
+  mounted: function () {
 
     axios
-      .get("https://flynn.boolean.careers/exercises/api/array/music")
-      .then(function (result) {
-        const albums = result.data.response;
-        console.log(albums);
+      .get ("https://flynn.boolean.careers/exercises/api/array/music")
+      .then (got => {
+        this.albums = got.data.response
       });
 
   },
